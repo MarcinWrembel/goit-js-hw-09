@@ -59,8 +59,8 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-
 btnBeginCount.addEventListener('click', () => {
+  btnBeginCount.setAttribute('disabled', '');
   let interval = setInterval(() => {
     let currentTime = new Date().getTime();
     let msToCount = datePicker.selectedDates[0].getTime() - currentTime;
